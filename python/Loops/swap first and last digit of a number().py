@@ -18,4 +18,4 @@ l1=(n-t2)+t1
 l2=l1-p
 l3=p*t2
 l4=l3+l2
-print(l4)
+print("The swaped number is "l4)
