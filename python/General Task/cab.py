@@ -9,6 +9,8 @@ while i < 4:
             Source = 0
             geDestination = int(input("Enter destination"))
             distance = geDestination
+            if distance>5:
+                print("******If the distance is greter than 5km price may increase according to car type*******")
             print("Select any model from below ")
             car = {1: 'Mini', 2: 'Sedan', 3: 'XUV', 4: 'premium'}
             c = int(input("Select your car 1 -->Mini 2 --> Sedan 3 -->XUV 4 -->premium "))
@@ -81,12 +83,12 @@ while i < 4:
                 print("Wrong selection")
                 
                 
-                print("*******Bill Recipt*******")
-                print("Welcome", userName)
-                print("Total distance is", distance,"km")
-                print("Your car type is", car[c])
-                print("Total cost is", Total)
-                print("Thank u for choosing us")
+            print("*******Bill Recipt*******")
+            print("Welcome", userName)
+            print("Total distance is", distance,"km")
+            print("Your car type is", car[c])
+            print("Total cost is", Total)
+            print("Thank u for choosing us")
 
 
             break
