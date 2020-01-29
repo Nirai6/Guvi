@@ -104,7 +104,7 @@ def register():
         c=0
         while(c<3):
             email=input("Enter ur email : ")
-            if "@gmail.com" in  email:
+            if email.endswith("@gmail.com"): 
                 if email=='@gmail.com':
                     print("Try again")
                     c=c+1
