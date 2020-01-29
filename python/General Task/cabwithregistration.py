@@ -25,7 +25,7 @@ while b<4:
         
         
         
-    if (f=="NOTRREGISTERED"):
+    if (f=="NOTREGISTERED"):
         getUsernmae = str(input("Enter new User name: "))
         getPassword = str(input("Enter Password: "))
         Registereduser.__setitem__(getUsernmae, getPassword)
