@@ -500,36 +500,53 @@ var info=[
       "email": "Josiane_Smith@yahoo.com"
     }
   ]
+  //To display first page
   var x=0;
   var x1=9;
   details()
-  console.log(info[1])
-  for(var i=1;i<=10;i++){
-      console.log(i)
-  
+  //First button
+  var l=document.createElement("button")
+  l.setAttribute("id","first")
+  l.setAttribute("class","button")
+  l.innerHTML="first"
+  document.body.appendChild(l);
+  //prev button
+  var p=document.createElement("button")
+  p.setAttribute("id","prev")
+  p.setAttribute("class","button")
+  p.innerHTML="prev"
+  document.body.appendChild(p);
+  //10 Buttons 
+  for(var i=1;i<=10;i++){    
   var b =document.createElement("button")
-  
   b.setAttribute("id",(i*10-10));
-
-
+  b.setAttribute("class","button")
   b.innerHTML=i;
+  var b1=document.getElementById("button")
   document.body.appendChild(b);
- 
+ //Event listener for 10 buttons
   b.addEventListener("click",c=>{
     x=c.target.id
-    
      x1=parseInt(x)+9
-    console.log(x,x1)
-    
-   
-    
-    details()
-    
-
+     details()
   })
-
   }
+  //next button
+  var p1=document.createElement("button")
+  p1.setAttribute("id","next")
+  p1.setAttribute("class","button")
+  p1.innerHTML="next"
+  document.body.appendChild(p1);
+  //Last button
+  var l1=document.createElement("button")
+  l1.setAttribute("id","last")
+  l1.setAttribute("class","button")
+  
+  l1.innerHTML="last"
+  document.body.appendChild(l1);
+  //function to display details from json
   function details(){
+    // display first page
     if (x<1){
       j=1
     }
@@ -538,8 +555,54 @@ var info=[
   table.innerHTML+="<center>"+"ID: "+ info[j].id+"<br>"+"NAME: "+info[j].name+"<br>"+"EMAIL: "+info[j].email+"<hr>"
   var k=(((j-9)/10)+1)
   table1.innerHTML="<center>"+"PAGE NO. : "+k
-
-  console.log(info[j].name)
   }
 }
+ //Event listener for prev button
+p.addEventListener("click",e=>{
+  var h=e.target.id
+  if(x>0){
+    x=x-10
+  x1=x1-10
+  details()
+  }
+  else{
+    alert("FIRST PAGE!!!")
+  }
+})
+//Event listener for next button
+p1.addEventListener("click",e1=>{
+  var h=e1.target.id
+  if(x<90){
+  x=x+10
+  x1=x1+10
+  details()
+  }
+  else{
+    alert("LAST PAGE!!!")
+  }  
+})
+//Event listener for first button
+l.addEventListener("click",e1=>{
+  if(x>0){
+  var h=e1.target.id
+  x=0
+  x1=9
+  details() 
+  }
+  else{
+    alert("IT IS THE FIRST PAGE!!!")
+  }
+})
+ //Event listener for Last button
+l1.addEventListener("click",e1=>{
+  var h=e1.target.id
+  if(x<90){
+  x=90
+  x1=99
+  details()
+  }
+  else{
+    alert("IT IS THE LAST PAGE!!!")
+  }
+})
 
