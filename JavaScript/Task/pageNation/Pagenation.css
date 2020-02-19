@@ -19,5 +19,3 @@ body{
   cursor: pointer;
   border: 2px solid black;
 }
-.btn-grad {background-image: linear-gradient(to right, #2b5876 0%, #4e4376 51%, #2b5876 100%)}
-.btn-grad:hover { background-position: right center; }
