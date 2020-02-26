@@ -253,9 +253,20 @@ function createtable(){
       var td=tr.insertCell();
       td.innerHTML=(element[e])
       
-    
-
      }
+    //EditButton
+      var editTd = tr.insertCell();
+      var editButton = document.createElement("button");
+      editButton.innerHTML = "Edit";
+      editTd.appendChild(editButton);
+     // tr.appendChild(editTd)
+     //DeleteButton
+     var deltd = document.createElement("td");
+     var delButton = document.createElement("button");
+     delButton.innerHTML = "Delete";
+     tr.appendChild(deltd)
+     deltd.appendChild(delButton);
+     
 
   }
 }
