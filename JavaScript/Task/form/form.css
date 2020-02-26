@@ -1,0 +1,76 @@
+.HTML,body{
+    margin:0;
+    padding:0;
+    height:100%;
+    width:100%;
+    background-image: linear-gradient(to top, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);
+  }
+  
+  #form1{
+    position:relative;
+    
+    display: flex;
+    justify-content: space-between;
+    height:100%; 
+    width:50%;
+    
+    color: black;
+    
+    font-size:20px;
+    
+    background-image: linear-gradient(to top, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);
+      float:left;
+  }
+  
+  #tab{
+    
+      
+    height:100%;
+    width:50%;
+   
+    background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
+      float:right;
+  }
+
+  input[type="submit"]{
+    position: absolute;
+    bottom:0;
+    left: 0px;
+    right: 0px;
+    width: 40%;
+    height:5% ;
+   
+    background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
+    border:rgb(red, green, blue);
+    color:#fff;
+    font-size:20px;
+    font-weight:70;
+    cursor:pointer;
+    font-family:'Ubuntu',sans-serif
+    }
+    #table {
+      font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    #table td, #table th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+
+#table tr:nth-child(even){background-color: #6b8cce;}
+
+
+#table tr:hover {background-color: #a2b6df;}
+
+#table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-image: linear-gradient(to top, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);
+
+  color: white;
+}
+    
